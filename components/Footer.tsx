@@ -24,7 +24,8 @@ export default function Footer() {
                 }
             }}>
                 <Text>
-                    Fiscally sponsored by The Hack Foundation. Nonprofit EIN: 81-2908499
+                    {/*Fiscally sponsored by The Hack Foundation. Nonprofit EIN: 81-2908499*/}
+                    Built by the community, fiscally sponsored by <Link href="https://the.hackfoundation.org/">The Hack Foundation</Link>.
                 </Text>
                 <Box sx={{
                     display: "flex",

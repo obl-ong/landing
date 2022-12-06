@@ -11,7 +11,7 @@ export default function BreakpointIndicator() {
             border: "1px solid",
             borderColor: "black",
             borderRadius: "50%",
-            backgroundColor: ["red", "blue", "green", "purple"]
+            backgroundColor: ["red", "blue", "green", "purple", "pink"]
         }} />
     )
 }
