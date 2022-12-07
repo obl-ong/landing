@@ -25,6 +25,7 @@ export default function Hero() {
             alignItems: "start",
             justifyContent: "center",
             minHeight: "100vh",
+	    paddingTop: [0, "2rem"]
             // marginBottom: [0, "4rem"]
         }}>
             <Heading as="h1" sx={{
