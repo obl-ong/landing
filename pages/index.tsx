@@ -7,6 +7,7 @@ import BreakpointIndicator from "../components/BreakpointIndicator";
 import Hero from "../sections/Hero";
 import Donate from "../sections/Donate";
 import Vision from "../sections/Vision";
+import HowTo from "../sections/HowTo";
 
 export default function Home() {
 
@@ -18,6 +19,7 @@ export default function Home() {
             </Head>
             <Hero />
             <Vision />
+            <HowTo />
             <Donate />
             <Footer />
         </>

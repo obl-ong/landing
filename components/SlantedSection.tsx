@@ -9,32 +9,22 @@ export default function SlantedSection(props: {
     chipVariant?: string,
     heading: string,
     chip: string,
-    first: boolean,
+    first?: boolean,
+    last?: boolean,
     children?: React.ReactNode
 }) {
-    const { bg = "yellow", children, chip, chipVariant = "pink", color = "black", heading, first } = props;
+    const { bg = "yellow", children, chip, chipVariant = "pink", color = "black", heading, first, last } = props;
     return (
         <Box sx={{
             position: "relative",
             color
         }}>
-            {/*<svg sx={{
-                position: "absolute",
-                top: "-75px",
-                width: "100%",
-                height: "150px"
-            }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1512 150" fill="none" preserveAspectRatio="xMidYMax slice">
-                <path sx={{
-                    fill: bg
-                }} d="M1512 0 0 150h1512V0Z"/>
-            </svg>*/}
             <Box sx={{
                 position: "absolute",
                 top: first ? 0 : `calc(-1 * ${slantHeight} / 2)`,
-                // width: "0",
-                // height: "0",
                 borderBottom: "2px solid", // help with what is presumably fp rounding errors
-                borderBottomColor: bg
+                borderBottomColor: bg,
+                pointerEvents: "none"
             }}>
                 <Box sx={{
                     borderLeft: "solid transparent",
@@ -54,7 +44,9 @@ export default function SlantedSection(props: {
                     <Container sx={{
                         position: "relative",
                         top: ["0", null, null, null, "-1.625rem"],
-                        paddingTop: ["1rem", null, null, "0"]
+                        paddingTop: ["1rem", null, null, "0"],
+                        paddingBottom: !last && `calc${slantHeight}`,
+                        marginBottom: !last && `calc(-1 * ${slantHeight})`
                     }}>
                         <Box sx={{
                             display: "flex",
@@ -63,7 +55,10 @@ export default function SlantedSection(props: {
                             alignItems: "flex-start"
                         }}>
                             <Badge variant={chipVariant}>{chip}</Badge>
-                            <Heading as="h2" variant="sectionHeading">{heading}</Heading>
+                            <Heading as="h2" variant="sectionHeading" sx={{
+                                paddingBottom: "1rem"
+                            }}>{heading}</Heading>
+                            {children}
                         </Box>
                     </Container>
                 </Box>
