@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Button, Container, Heading, ThemeUIStyleObject } from "theme-ui";
+import { Button, Container, Heading, ThemeUIStyleObject, Grid } from "theme-ui";
 import { useTheme } from "../ui/theme";
 import Footer from "../components/Footer";
 import BreakpointIndicator from "../components/BreakpointIndicator";
@@ -8,20 +8,29 @@ import Hero from "../sections/Hero";
 import Donate from "../sections/Donate";
 import Vision from "../sections/Vision";
 import HowTo from "../sections/HowTo";
+import PoweredBy from "../sections/PoweredBy";
 
 export default function Home() {
 
     return (
         <>
-            <BreakpointIndicator />
+            {/*<BreakpointIndicator />*/}
             <Head>
                 <title>Obl.ong</title>
             </Head>
             <Hero />
+            <Container>
+                <Grid columns={[null, 1, 2]}>
+                    <Vision />
+                    <HowTo />
+                </Grid>
+            </Container>
+            {/*
             <Vision />
-            <HowTo />
+            <HowTo />*/}
             <Donate />
             <Footer />
+            <PoweredBy />
         </>
     )
 }

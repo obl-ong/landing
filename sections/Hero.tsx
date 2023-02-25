@@ -24,7 +24,8 @@ export default function Hero() {
             flexDirection: "column",
             alignItems: "start",
             justifyContent: "center",
-            minHeight: "100vh",
+            minHeight: "95vh",
+            marginBottom: "4rem"
             // marginBottom: [0, "4rem"]
         }}>
             <Heading as="h1" sx={{

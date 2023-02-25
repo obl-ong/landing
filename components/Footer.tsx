@@ -21,7 +21,8 @@ export default function Footer() {
                 lineHeight: "100%",
                 "& a": {
                     color: "inherit"
-                }
+                },
+                zIndex: "999"
             }}>
                 <Text>
                     {/*Fiscally sponsored by The Hack Foundation. Nonprofit EIN: 81-2908499*/}

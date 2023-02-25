@@ -1,13 +1,15 @@
 import SlantedSection from "../components/SlantedSection";
 import { Heading, Link, Box } from "theme-ui";
+import Card from "../components/Card";
 
 export default function HowTo() {
     return (
-        <SlantedSection bg="blue" last heading="Easy setup, zero cost" chip="Register your subdomain">
+        <Card bg="blue" chipVariant="white" last heading="Easy setup, zero cost" chip="Register your subdomain">
             <ol sx={{
-                paddingLeft: 0,
+                padding: 0,
+                margin: 0,
                 "& h3": {
-                    fontSize: "2rem",
+                    fontSize: "1.5rem",
                     fontWeight: "700",
                 },
                 counterReset: "item",
@@ -16,7 +18,9 @@ export default function HowTo() {
                 "& li > div": {
                     display: "flex",
                     flexDirection: "column",
-                    gap: "0.5rem",
+                    gap: "0.5rem"
+                },
+                "& li:not(:last-child) > div": {
                     marginBottom: "1.5rem"
                 },
                 "& li::before": {
@@ -41,11 +45,11 @@ export default function HowTo() {
                     // little vertical line that connects the number to the next one
                     content: '""',
                     position: "absolute",
-                    top: "50%",
+                    top: "5px",
                     left: "1.875rem",
                     width: "0.25rem",
                     height: "100%",
-                    backgroundColor: "black"
+                    backgroundColor: "white"
                 }
             }}>
                 <li>
@@ -73,6 +77,6 @@ export default function HowTo() {
                     </Box>
                 </li>
             </ol>
-        </SlantedSection>
+        </Card>
     )
 }
