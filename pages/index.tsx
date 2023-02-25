@@ -27,6 +27,7 @@ export default function Home() {
                 <meta name="twitter:description" content="Free, quality domains for all, backed by a nonprofit" />
                 <meta name="twitter:image" content="https://home.obl.ong/img/og-card.png" />
                 <meta name="twitter:image:alt" content="Obl.ong - Free, quality domains for all, backed by a nonprofit" />
+                <meta name="google-site-verification" content="j7mOHwH-xmMSAc5dbkIBhQmr9hV3zbzOj5qXJmY_px8" />
             </Head>
             <Hero />
             <Container>
