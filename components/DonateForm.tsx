@@ -1,5 +1,7 @@
 import { Box, Button, Flex, Input, Label, Radio, Text } from "theme-ui";
 import { useState } from "react";
+import Image from "next/image";
+import stripe from "../public/img/stripe.svg";
 
 const presets = [5, 10, 25];
 const CUSTOM = Symbol();
@@ -71,7 +73,8 @@ export default function DonateForm() {
                     }}>
                         <Input type="number" placeholder="Custom" value={customAmount} sx={{
                             backgroundColor: amount === CUSTOM ? "yellow" : "white",
-                            paddingLeft: customAmount === "" ? "1rem" : "1.5rem"
+                            paddingLeft: customAmount === "" ? "1rem" : "1.5rem",
+                            height: "100%"
                         }} onClick={() => customAmount !== "" && setAmount(CUSTOM)} onChange={e => {
                             setCustomAmount(e.target.value);
                             if(e.target.value == "") setAmount(1);
@@ -92,9 +95,7 @@ export default function DonateForm() {
                 fontWeight: 700,
                 lineHeight: "100%"
             }}>
-                {"Continue with "}<img sx={{
-                    height: "1.75rem"
-                }} src="img/stripe.svg" alt="Stripe" />{" →"}
+                {"Continue with "}<Image src={stripe} alt="Stripe" height={28} />{" →"}
             </Button>
         </Flex>
     );

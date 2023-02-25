@@ -1,5 +1,7 @@
 import { Box, Link, Text } from "theme-ui";
 
+const encoded = "dGVhbUBvYmwub25n";
+
 export default function Footer() {
     return (
         <>
@@ -33,10 +35,14 @@ export default function Footer() {
                     gap: "0.5rem",
                     minWidth: "max-content"
                 }}>
-                    <Link href="">GitHub</Link>
-                    <Link href="">Contact</Link>
-                    <Link href="">Donate</Link>
-                    <Link href="">Code of Conduct</Link>
+                    <Link href="https://github.com/obl-ong">GitHub</Link>
+                    <Link href="#" onClick={() => {
+                        if (typeof window !== "undefined") {
+                            window.open(`mailto:${atob(encoded)}`);
+                        }
+                    }}>Contact</Link>
+                    <Link href="#donate">Donate</Link>
+                    <Link href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/">Code of Conduct</Link>
                 </Box>
             </footer>
             <Box sx={{ height: "2.25rem", display: ["none", "inherit"] }} />

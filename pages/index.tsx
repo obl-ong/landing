@@ -17,6 +17,11 @@ export default function Home() {
             {/*<BreakpointIndicator />*/}
             <Head>
                 <title>Obl.ong</title>
+                {/* seo */}
+                <meta name="description" content="Free, quality domains for all, backed by a nonprofit" />
+                <meta name="og:title" content="Obl.ong" />
+                <meta name="og:description" content="Free, quality domains for all, backed by a nonprofit" />
+                <meta name="og:image" content="https://home.obl.ong/img/og-card.png" />
             </Head>
             <Hero />
             <Container>

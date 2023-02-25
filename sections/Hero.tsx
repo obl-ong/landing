@@ -46,11 +46,17 @@ export default function Hero() {
             }}>
                 Free, quality domains for all,<br />backed by a <Text color="pink">nonprofit</Text>
             </Heading>
-            <Button as="a" variant="primaryLg" sx={{
-                marginTop: ["2rem","3rem"],
-                marginLeft: "auto",
-                cursor: "pointer"
-            }}>
+            <Button
+                as="a"
+                //@ts-ignore
+                href="https://dash.obl.ong"
+                variant="primaryLg"
+                sx={{
+                    marginTop: ["2rem","3rem"],
+                    marginLeft: "auto",
+                    cursor: "pointer"
+                }}
+            >
                 Go get one →
             </Button>
             <Text sx={{

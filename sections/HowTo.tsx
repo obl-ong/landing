@@ -55,9 +55,9 @@ export default function HowTo() {
                 <li>
                     <Box>
                         <Heading as="h3">
-                            <Link color="pink" href="https://github.com/obl-ong">Fork our GitHub repository</Link> and add your site's DNS
+                            <Link color="pink" href="https://dash.obl.ong">Sign up</Link> on our dashboard
                         </Heading>
-                        (if you don't know how to do that, the link has instructions!)
+                        No password needed!
                     </Box>
                 </li>
                 <li>
@@ -71,7 +71,7 @@ export default function HowTo() {
                 <li>
                     <Box>
                         <Heading as="h3">
-                            Get your PR merged and enjoy your domain!
+                            Get approved and enjoy your domain!
                         </Heading>
                         If we aren't backlogged it should only take a day.
                     </Box>

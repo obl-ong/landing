@@ -61,7 +61,7 @@ const badgeFactory = (text: string, bg: string): ThemeUICSSObject => ({
     color: text,
     fontSize: "1.25rem",
     lineHeight: "100%",
-    fontWeight: 400,
+    fontWeight: 500,
     fontFamily: "body",
     textTransform: "uppercase"
 })
