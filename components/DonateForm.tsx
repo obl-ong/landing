@@ -29,11 +29,11 @@ export default function DonateForm() {
         >
             <Box>
                 <Label htmlFor="donate-name">Your name</Label>
-                <Input required id="donate-name" name="name" placeholder="Fiona Oblong" />
+                <Input required id="donate-name" name="name" placeholder="Joe Biden" />
             </Box>
             <Box>
                 <Label htmlFor="donate-email">Your email</Label>
-                <Input required id="donate-email" name="email" placeholder="fionao@gmail.com" />
+                <Input required id="donate-email" name="email" placeholder="potus@whitehouse.gov" />
             </Box>
             <Box>
                 <Label htmlFor="donate-amount">Donation amount</Label>
