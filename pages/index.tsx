@@ -29,8 +29,8 @@ export default function Home() {
             <Vision />
             <HowTo />*/}
             <Donate />
-            <Footer />
             <PoweredBy />
+            <Footer />
         </>
     )
 }

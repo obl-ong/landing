@@ -7,7 +7,7 @@ export default function PoweredBy() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginBottom: "3rem"
+            marginBottom: "1rem"
         }}>
             <Link href="https://vercel.com?utm_source=oblong&utm_campaign=oss">
                 <img src="/img/powered-by-vercel.svg" alt="Powered by Vercel" />
