@@ -22,6 +22,11 @@ export default function Home() {
                 <meta name="og:title" content="Obl.ong" />
                 <meta name="og:description" content="Free, quality domains for all, backed by a nonprofit" />
                 <meta name="og:image" content="https://home.obl.ong/img/og-card.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Obl.ong" />
+                <meta name="twitter:description" content="Free, quality domains for all, backed by a nonprofit" />
+                <meta name="twitter:image" content="https://home.obl.ong/img/og-card.png" />
+                <meta name="twitter:image:alt" content="Obl.ong - Free, quality domains for all, backed by a nonprofit" />
             </Head>
             <Hero />
             <Container>
