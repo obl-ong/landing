@@ -1,9 +1,12 @@
 import { Box, Container, Grid, Heading, Link, Text } from "theme-ui";
 import DonateForm from "../components/DonateForm";
+import { motion } from "framer-motion"
+
+let MotionContainer = motion(Container);
 
 export default function Donate() {
     return (
-        <Container sx={{
+        <MotionContainer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} sx={{
             marginY: "4rem",
             display: "flex",
             flexDirection: "column",
@@ -29,6 +32,6 @@ export default function Donate() {
                     <DonateForm />
                 </Box>
             </Grid>
-        </Container>
+        </MotionContainer>
     )
 }
