@@ -1,4 +1,4 @@
-import { Button, Container, Heading, Text, ThemeUIStyleObject } from "theme-ui";
+import { Button, Container, Heading, Text, Box, ThemeUIStyleObject } from "theme-ui";
 import { useTheme } from "../ui/theme";
 import { motion } from "framer-motion"
 import Typewriter from 'typewriter-effect';
@@ -46,17 +46,30 @@ export default function Hero() {
                 position: "relative",
                 "&::before": ovalStyles
             }}>Obl<br/>ong</Heading>
-            <Heading as="h2" color="primary" sx={{
-                lineHeight: "100%",
-                fontSize: ["2rem", "3rem"]
+            <Box sx={{
+                position: "relative"
             }}>
-                <Typewriter
-    		        onInit={(typewriter) => {
-    		            typewriter.typeString("Free, quality domains for all,<br />backed by a <span style='color: var(--theme-ui-colors-pink)'>nonprofit</span>").start();
-  		            }}
-                    options={{ cursor: "", delay: 10 }}
-                />
-            </Heading>
+                <Heading as="h2" color="primary" sx={{
+                    lineHeight: "100%",
+                    fontSize: ["2rem", "3rem"],
+                    visibility: "hidden"
+                }}>Free, quality domains for all,<br />backed by a nonprofit</Heading>
+                <Heading as="h2" color="primary" sx={{
+                    lineHeight: "100%",
+                    fontSize: ["2rem", "3rem"],
+                    position: "absolute",
+                    top: 0,
+                    left: 0
+                }}>
+                    <Typewriter
+                        onInit={(typewriter) => {
+                            typewriter.typeString("Free, quality domains for all,<br />backed by a <span style='color: var(--theme-ui-colors-pink)'>nonprofit</span>").start();
+                        }}
+                        options={{ cursor: "", delay: 10 }}
+                    />
+                </Heading>
+
+            </Box>
             <MotionButton
                 as="a"
                 //@ts-ignore
