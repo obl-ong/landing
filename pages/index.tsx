@@ -9,6 +9,10 @@ import Donate from "../sections/Donate";
 import Vision from "../sections/Vision";
 import HowTo from "../sections/HowTo";
 import PoweredBy from "../sections/PoweredBy";
+import { motion } from "framer-motion"
+
+let MotionContainer = motion(Container);
+
 
 export default function Home() {
 
@@ -30,12 +34,16 @@ export default function Home() {
                 <meta name="google-site-verification" content="j7mOHwH-xmMSAc5dbkIBhQmr9hV3zbzOj5qXJmY_px8" />
             </Head>
             <Hero />
-            <Container>
+            <MotionContainer 
+	    initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+	    transition={{  length: 0.1 }}
+  	    >
                 <Grid columns={[null, 1, 2]}>
                     <Vision />
                     <HowTo />
                 </Grid>
-            </Container>
+            </MotionContainer>
             {/*
             <Vision />
             <HowTo />*/}

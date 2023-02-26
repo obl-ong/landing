@@ -1,5 +1,11 @@
 import { Button, Container, Heading, Text, ThemeUIStyleObject } from "theme-ui";
 import { useTheme } from "../ui/theme";
+import { motion } from "framer-motion"
+import Typewriter from 'typewriter-effect';
+
+let MotionButton = motion(Button);
+let MotionContainer = motion(Container);
+
 
 const ovalStyles: ThemeUIStyleObject = {
     content: '""',
@@ -19,7 +25,7 @@ export default function Hero() {
     const { theme } = useTheme();
 
     return (
-        <Container sx={{
+        <MotionContainer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "start",
@@ -43,10 +49,12 @@ export default function Hero() {
             <Heading as="h2" color="primary" sx={{
                 lineHeight: "100%",
                 fontSize: ["2rem", "3rem"]
-            }}>
-                Free, quality domains for all,<br />backed by a <Text color="pink">nonprofit</Text>
+            }}><Typewriter
+    		onInit={(typewriter) => {
+    		  typewriter.typeString("Free, quality domains for all,<br />backed by a <span style='color: var(--theme-ui-colors-pink)'>nonprofit</span>").start();
+  		}} options={{ cursor: "", delay: 10 }} />
             </Heading>
-            <Button
+            <MotionButton
                 as="a"
                 //@ts-ignore
                 href="https://dash.obl.ong"
@@ -56,9 +64,15 @@ export default function Hero() {
                     marginLeft: "auto",
                     cursor: "pointer"
                 }}
+		whileHover={{
+		    x: 30,
+		    ease: "easeInOut",
+    		    transition: { duration: 0.25 },
+  		}}
+  		whileTap={{ scale: 0.9 }}
             >
                 Go get one →
-            </Button>
+            </MotionButton>
             <Text sx={{
                 marginTop: "0.5rem",
                 marginLeft: "auto",
@@ -70,6 +84,6 @@ export default function Hero() {
                 fontWeight: 700,
                 color: "white"
             }}>yourname</Text>.obl.ong</Text>
-        </Container>
+        </MotionContainer>
     );
 }
