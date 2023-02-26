@@ -35,10 +35,11 @@ export default function Home() {
             </Head>
             <Hero />
             <MotionContainer 
-	    initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-	    transition={{  length: 0.1 }}
-  	    >
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+	            transition={{  length: 0.1 }}
+                viewport={{ once: true }}
+  	        >
                 <Grid columns={[null, 1, 2]}>
                     <Vision />
                     <HowTo />

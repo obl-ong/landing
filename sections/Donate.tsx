@@ -6,7 +6,7 @@ let MotionContainer = motion(Container);
 
 export default function Donate() {
     return (
-        <MotionContainer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} sx={{
+        <MotionContainer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} sx={{
             marginY: "4rem",
             display: "flex",
             flexDirection: "column",

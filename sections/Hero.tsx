@@ -25,7 +25,7 @@ export default function Hero() {
     const { theme } = useTheme();
 
     return (
-        <MotionContainer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} sx={{
+        <MotionContainer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "start",
@@ -68,7 +68,6 @@ export default function Hero() {
                         options={{ cursor: "", delay: 10 }}
                     />
                 </Heading>
-
             </Box>
             <MotionButton
                 as="a"
