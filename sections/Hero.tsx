@@ -49,10 +49,13 @@ export default function Hero() {
             <Heading as="h2" color="primary" sx={{
                 lineHeight: "100%",
                 fontSize: ["2rem", "3rem"]
-            }}><Typewriter
-    		onInit={(typewriter) => {
-    		  typewriter.typeString("Free, quality domains for all,<br />backed by a <span style='color: var(--theme-ui-colors-pink)'>nonprofit</span>").start();
-  		}} options={{ cursor: "", delay: 10 }} />
+            }}>
+                <Typewriter
+    		        onInit={(typewriter) => {
+    		            typewriter.typeString("Free, quality domains for all,<br />backed by a <span style='color: var(--theme-ui-colors-pink)'>nonprofit</span>").start();
+  		            }}
+                    options={{ cursor: "", delay: 10 }}
+                />
             </Heading>
             <MotionButton
                 as="a"
@@ -64,12 +67,14 @@ export default function Hero() {
                     marginLeft: "auto",
                     cursor: "pointer"
                 }}
-		whileHover={{
-		    x: 30,
-		    ease: "easeInOut",
-    		    transition: { duration: 0.25 },
-  		}}
-  		whileTap={{ scale: 0.9 }}
+                transition={{
+                    ease: "easeInOut"
+                }}
+                whileHover={{
+                    x: 30,
+                    transition: { duration: 0.25 }
+                }}
+                whileTap={{ scale: 0.9 }}
             >
                 Go get one →
             </MotionButton>

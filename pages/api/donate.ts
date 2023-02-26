@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const donate = async (req: NextApiRequest, res: NextApiResponse) => {
     const { email, name, amount } = req.query;
     if(!email || !name || !amount || typeof email !== "string" || typeof name !== "string" || typeof amount !== "string") {
         res.status(400).send("Bad Request");
@@ -33,3 +33,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     }
     res.status(500).send("Could not get donation URL");
 };
+
+export default donate;
