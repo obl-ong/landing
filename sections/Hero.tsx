@@ -80,13 +80,15 @@ export default function Hero() {
                     cursor: "pointer"
                 }}
                 transition={{
-                    ease: "easeInOut"
+                    type: "spring",
+                    stiffness: 500,
+                    damping: 30
                 }}
                 whileHover={{
                     x: 30,
                     transition: { duration: 0.25 }
                 }}
-                whileTap={{ scale: 0.9 }}
+                whileTap={{ scale: 0.95 }}
             >
                 Go get one →
             </MotionButton>
