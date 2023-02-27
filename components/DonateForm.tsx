@@ -2,6 +2,10 @@ import { Box, Button, Flex, Input, Label, Radio, Text } from "theme-ui";
 import { useState } from "react";
 import Image from "next/image";
 import stripe from "../public/img/stripe.svg";
+import { motion } from "framer-motion"
+
+let MotionButton = motion(Button);
+let MotionInput = motion(Input);
 
 const presets = [5, 10, 25];
 const CUSTOM = Symbol();
@@ -29,11 +33,11 @@ export default function DonateForm() {
         >
             <Box>
                 <Label htmlFor="donate-name">Your name</Label>
-                <Input required id="donate-name" name="name" placeholder="Fiona Oblong" />
+                <MotionInput initial={{ scale: 1, filter: "none" }} whileFocus={{ scale: 1.05, filter: "drop-shadow(0 3px 10px rgba(0,0,0,0.5))" }} required id="donate-name" name="name" placeholder="Fiona Oblong" />
             </Box>
             <Box>
                 <Label htmlFor="donate-email">Your email</Label>
-                <Input required id="donate-email" name="email" placeholder="fionao@gmail.com" />
+                <MotionInput initial={{ scale: 1, filter: "none" }} whileFocus={{ scale: 1.05, filter: "drop-shadow(0 3px 10px rgba(0,0,0,0.5))" }} required id="donate-email" name="email" placeholder="fionao@gmail.com" />	
             </Box>
             <Box>
                 <Label htmlFor="donate-amount">Donation amount</Label>
@@ -71,7 +75,7 @@ export default function DonateForm() {
                             color: "black"
                         }
                     }}>
-                        <Input type="number" placeholder="Custom" value={customAmount} sx={{
+                	<MotionInput initial={{ scale: 1, filter: "none" }} whileFocus={{ scale: 1.05, filter: "drop-shadow(0 3px 10px rgba(0,0,0,0.5))" }} type="number" placeholder="Custom" value={customAmount} sx={{
                             backgroundColor: amount === CUSTOM ? "yellow" : "white",
                             paddingLeft: customAmount === "" ? "1rem" : "1.5rem",
                             height: "100%"
@@ -90,13 +94,16 @@ export default function DonateForm() {
             }}>
                 Your contribution is tax-deductible; you’ll be emailed with a receipt.
             </Text>
-            <Button type="submit" variant="whiteMd" sx={{
+            <MotionButton type="submit" variant="whiteMd" sx={{
                 fontSize: "1.25rem",
                 fontWeight: 700,
                 lineHeight: "100%"
-            }}>
+            }} whileHover={{
+                y: -5,
+    		transition: { duration: 0.25 },
+  	      }} whileTap={{ scale: 0.9, transition: { duration: 0.25 } }}>
                 {"Continue with "}<Image src={stripe} alt="Stripe" height={28} />{" →"}
-            </Button>
+            </MotionButton>
         </Flex>
     );
 }
