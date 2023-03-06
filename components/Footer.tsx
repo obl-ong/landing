@@ -42,7 +42,7 @@ export default function Footer() {
                         }
                     }}>Contact</Link>
                     <Link href="#donate">Donate</Link>
-                    <Link href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/">Code of Conduct</Link>
+                    <Link href="https://github.com/obl-ong/code-of-conduct">Code of Conduct</Link>
                 </Box>
             </footer>
             <Box sx={{ height: "2.25rem", display: ["none", "inherit"] }} />
