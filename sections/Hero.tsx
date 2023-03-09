@@ -2,6 +2,7 @@ import { Button, Container, Heading, Text, Box, ThemeUIStyleObject } from "theme
 import { useTheme } from "../ui/theme";
 import { motion } from "framer-motion"
 import Typewriter from 'typewriter-effect';
+import Script from "next/script";
 
 let MotionButton = motion(Button);
 let MotionContainer = motion(Container);
@@ -69,10 +70,16 @@ export default function Hero() {
                     />
                 </Heading>
             </Box>
+            <Script async src="https://tally.so/widgets/embed.js" />
             <MotionButton
-                as="a"
+                // as="a"
                 //@ts-ignore
-                href="https://dash.obl.ong"
+                // href="https://dash.obl.ong"
+                as="button"
+                data-tally-open="m6Lx8J"
+                data-tally-layout="modal"
+                data-tally-width="500"
+                data-tally-hide-title="1"
                 variant="primaryLg"
                 sx={{
                     marginTop: ["2rem","3rem"],
@@ -90,7 +97,7 @@ export default function Hero() {
                 }}
                 whileTap={{ scale: 0.95 }}
             >
-                Go get one →
+                Join the waitlist →
             </MotionButton>
             <Text sx={{
                 marginTop: "0.5rem",
