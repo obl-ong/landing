@@ -22,6 +22,19 @@ const ovalStyles: ThemeUIStyleObject = {
     zIndex: -1
 };
 
+const subheadingStyles: ThemeUIStyleObject = {
+    lineHeight: "100%",
+    fontSize: ["2rem", "2.9rem", "3rem"],
+    color: "primary",
+    "& br": {
+        "@media screen and (max-width: 28rem)": {
+            display: "none"
+        }
+    }
+};
+
+const subheadingHtml = "Free, quality domains for all, <br />backed by a <span style='color: var(--theme-ui-colors-pink)'>nonprofit</span>";
+
 export default function Hero() {
     const { theme } = useTheme();
 
@@ -50,21 +63,21 @@ export default function Hero() {
             <Box sx={{
                 position: "relative"
             }}>
-                <Heading as="h2" color="primary" sx={{
-                    lineHeight: "100%",
-                    fontSize: ["2rem", "3rem"],
-                    visibility: "hidden"
-                }}>Free, quality domains for all,<br />backed by a nonprofit</Heading>
-                <Heading as="h2" color="primary" sx={{
-                    lineHeight: "100%",
-                    fontSize: ["2rem", "3rem"],
+                <Heading as="h2" sx={{
+                    visibility: "hidden",
+                    ...subheadingStyles
+                }} dangerouslySetInnerHTML={{
+                    __html: subheadingHtml
+                }} />
+                <Heading as="h2" sx={{
                     position: "absolute",
                     top: 0,
-                    left: 0
+                    left: 0,
+                    ...subheadingStyles
                 }}>
                     <Typewriter
                         onInit={(typewriter) => {
-                            typewriter.typeString("Free, quality domains for all,<br />backed by a <span style='color: var(--theme-ui-colors-pink)'>nonprofit</span>").start();
+                            typewriter.typeString(subheadingHtml).start();
                         }}
                         options={{ cursor: "", delay: 10 }}
                     />
