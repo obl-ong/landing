@@ -21,7 +21,7 @@ export default function Home() {
             {/*<BreakpointIndicator />*/}
             <Head>
                 <title>Obl.ong</title>
-		<link rel="icon" href="https://home.obl.ong/img/favicon.png">
+		<link rel="icon" href="https://home.obl.ong/img/favicon.png"/>
                 {/* seo */}
                 <meta name="description" content="Free, quality domains for all, backed by a nonprofit" />
                 <meta name="og:title" content="Obl.ong" />
