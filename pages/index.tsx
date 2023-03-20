@@ -20,6 +20,7 @@ export default function Home() {
             <Title>Obl.ong</Title>
             <Head>
                 <meta name="google-site-verification" content="j7mOHwH-xmMSAc5dbkIBhQmr9hV3zbzOj5qXJmY_px8" />
+		<link href="https://social.dino.icu/@oblong" rel="me" />
             </Head>
             <Hero />
             <MotionContainer 
