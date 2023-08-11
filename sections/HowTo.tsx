@@ -55,7 +55,7 @@ export default function HowTo() {
                 <li>
                     <Box>
                         <Heading as="h3">
-                            <Link color="pink" href="https://dash.obl.ong">Sign up</Link> on our dashboard
+                            <Link color="pink" href="https://admin.obl.ong">Sign up</Link> on our dashboard
                         </Heading>
                         No password needed!
                     </Box>
