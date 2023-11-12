@@ -7,8 +7,8 @@ const donate = async (req: NextApiRequest, res: NextApiResponse) => {
         return;
     }
     const hcbPage = await fetch("https://hcb.hackclub.com/donations/start/oblong").then(r => r.text());
-    // const csrfToken = bankPage.match(/name="csrf-token" content="(.*)"/)?.[1];
-    const authenticityToken = bankPage.match(/name="authenticity_token" value="(.*)"/)?.at(-1);
+    // const csrfToken = hcbPage.match(/name="csrf-token" content="(.*)"/)?.[1];
+    const authenticityToken = hcbPage.match(/name="authenticity_token" value="(.*)"/)?.at(-1);
     if(!authenticityToken) {
         if(!hcbPage) return res.status(500).send("Could not get HCB page");
         return;
