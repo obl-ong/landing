@@ -22,7 +22,7 @@ export default function Donate() {
                         fontWeight: 400,
                         lineHeight: "120%"
                     }}>
-                        We can only stay afloat thanks to <Text color="pink" sx={{ fontWeight: 700 }}>everyday people like you</Text> who like what we’re doing and want to help out. All donations are <Text color="blue">tax-deductible</Text> and our financials are <Link href="https://bank.hackclub.com/oblong" color="yellow" sx={{ fontWeight: 700, textDecorationLine: "underline" }}>fully transparent</Link> (down to the individual transaction!)
+                        We can only stay afloat thanks to <Text color="pink" sx={{ fontWeight: 700 }}>everyday people like you</Text> who like what we’re doing and want to help out. All donations are <Text color="blue">tax-deductible</Text> and our financials are <Link href="https://hcb.hackclub.com/oblong" color="yellow" sx={{ fontWeight: 700, textDecorationLine: "underline" }}>fully transparent</Link> (down to the individual transaction!)
                     </Text>
                 </Box>
                 <Box sx={{
