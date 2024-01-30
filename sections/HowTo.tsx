@@ -65,7 +65,7 @@ export default function HowTo() {
                         <Heading as="h3">
                             Tell us what you're building!
                         </Heading>
-                        Send in your request and answer a few short questions - won't take more than a minute or two
+                        Send in your request and answer a few short questions - it won't take more than a minute or two
                     </Box>
                 </li>
                 <li>
