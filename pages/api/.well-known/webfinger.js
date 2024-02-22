@@ -7,5 +7,5 @@ export default function handler(req, res) {
           href: "https://admin.obl.ong"
         }
       ]
-    });
+    }));
 }
